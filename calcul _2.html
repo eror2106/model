@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+      #divPlusPLus {
+        display: flex;
+      }
+      #plusPlus {
+        flex-direction: column;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <input type="text" id="operand0" placeholder="0" /> +
+      <input type="text" id="operand1" placeholder="0" /><button id="compute">
+        =</button
+      ><span id="result"></span>
+    </p>
+    <p id="error_message"></p>
+    <div id="divPlusPLus">
+      <p id="plusPlusFinal"></p>
+    </div>
+    <div id="divMulti">
+      <p id="multiFinal"></p>
+    </div>
+
+    <script>
+      const button = document.getElementById("compute");
+      button.addEventListener("click", () => {
+        var messageError = "Les opérant ne sont pas des Nombre!";
+        var a = document.getElementById("operand0").value;
+        var b = document.getElementById("operand1").value;
+        a = parseInt(a);
+        b = parseInt(b);
+
+
+          for (var j = 1; j <= b; j++) {
+            if ( j%2 ==0 ) {
+              var resultPlusPLus = a + j;
+              document.getElementById("result").innerHTML = resultPlusPLus;
+            }
+
+          if (j==b) {
+
+            return false;
+          }
+        }
+
+
+
+           document.getElementById("error_message").innerHTML = messageError;
+
+      });
+
+    </script>
+  </body>
+</html>

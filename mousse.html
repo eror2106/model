@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<htmlq>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  
+    #mere{
+      display: flex;
+      flex-direction: row;
+    
+    }
+  </style>  
+</head>
+
+<body >
+  <div id="mere">
+    
+
+  
+  <p id="X">test</p>
+  
+  <p id="Y">test</p>
+
+    </div>
+ <script >
+    
+document.addEventListener("mousemove",  (e) => {
+    var X=e.offsetX;
+    var Y=e.offsetY;
+    var txt=document.getElementById('X');
+    txt.textContent = "x: " + X+" ";
+    var tst=document.getElementById('Y');
+    tst.textContent= ", y: "+Y;
+  
+})
+  
+ 
+  </script>
+</body>
+</html>

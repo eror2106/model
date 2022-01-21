@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exo JS</title>
+    <meta charset="utf-8" />
+  </head>
+  <body style="height: 100vh; margin: 0">
+    <div style="display: flex; height: 100%">
+      <div id="hover0" style="width: 50%; height: 100%; border: 1px blue solid">
+        <p id="destination0">init0</p>
+      </div>
+      <div id="hover1" style="width: 50%; height: 100%; border: 1px red solid">
+        <p id="destination1">init1</p>
+      </div>  
+    </div>
+
+    <script type="text/javascript">
+      console.log("Bonne chance");
+      var div = document.querySelector('#hover0');
+      var dive = document.querySelector('#hover1');
+        div.addEventListener("mousemove",  (e) => {
+        var X=e.offsetX;
+        var Y=e.offsetY;
+       
+        var txt=document.getElementById('hover1');
+        
+        txt.innerHTML = "x: " + X+" ,y:"+Y;
+      
+        
+      });
+
+      dive.addEventListener("mousemove",  (e) => {
+    
+        var a=e.offsetX;
+        var z=e.offsetY;
+        var txt2=document.getElementById('hover0');
+        txt2.innerHTML= "x: " + a+" ,y:"+z;
+        
+      });
+
+      
+  
+    </script>
+  </body>
+</html>
